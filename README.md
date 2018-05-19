@@ -1,4 +1,4 @@
-# DATA2000 physician count scraper
+# DATA2000 Physician Count Scraper
 This is a tool for scraping state physician DATA2000 waiver counts from SAMHSA available at: https://www.samhsa.gov/medication-assisted-treatment/physician-program-data/certified-physicians      
 
 This is useful for checking trends in DATA2000 approved doctors. This tool is likely more for researchers or journalists in terms of interest. 
