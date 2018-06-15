@@ -13,41 +13,30 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
-
+	linkmk()
+	
 	// Find the review items
 	doc.Find("views-field views-field-field-bup-year-certified .field-content").Each(func(i int, s *goquery.Selection) {
-		// For each item found, get the band and title
+		// For each item found, get the year
 		fmt.Println(i)
-		band := s.Find("Year:").Text()
-	//	title := s.Find("i").Text()
-		fmt.Printf("yearr %d: %v\n", i, band)
-		fmt.Println(band)
+		state := s.Find("State:").Text()
+		docnum := s.Find("i").()
+		fmt.Printf("State %d: %v\n", state, i)
+		fmt.Println(state)
 	})
 
-
-
-
-	/*
-func main() {
+func linkmk() {
 
 
 	//creates URLS and writes different URLs as slices to 'urls'
 	for i := 0; i <= inRuns; i++ {
 		fmt.Println("making URL slices")
 	urlss := fmt.Sprintf("https://www.samhsa.gov/medication-assisted-treatment/physician-program-data/certified-physicians?field_bup_us_state_code_value=All&page=1
-		lurl := fmt.Sprintf("https://tradeblock.com/api/blockchain/statistics/%s/%s/%d", inType,
-			inInterval, currentTimestamp)
+		lurl := fmt.Sprintf("https://www.samhsa.gov/medication-assisted-treatment/physician-program-data/certified-physicians?field_bup_us_state_code_value=All&page=%s", 
+			inPage)
+			
 		urls = append(urls, lurl)
 
-		if inInterval == "1h" {
-			currentTimestamp -= 3600000
-		} else if inInterval == "2h" {
-			currentTimestamp -= 7200000
-		} else if inInterval == "6h" {
-			currentTimestamp -= 21600000
-		} else if inInterval == "1d" {
-			currentTimestamp -= 86400000
-		}
 	}
 
 	fmt.Println(urls[0])
