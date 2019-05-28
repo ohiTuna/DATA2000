@@ -4,7 +4,6 @@ This is a tool for scraping state physician DATA2000 waiver counts from SAMHSA a
 This is useful for checking trends in DATA2000 approved doctors. This tool is likely more for researchers or journalists in terms of interest. 
 
 
-
 ### STATUS/VERSION    
 **project is currently idle but may be resumed in future**
 
